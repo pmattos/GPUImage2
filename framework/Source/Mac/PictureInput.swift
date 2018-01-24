@@ -3,15 +3,17 @@ import Cocoa
 
 public class PictureInput: ImageSource {
     public let targets = TargetContainer()
-    var imageFramebuffer:Framebuffer!
+    var imageFramebuffer: Framebuffer!
     var hasProcessedImage: Bool = false {
         didSet {
+            /*
             DispatchQueue.main.async {
                 self.imageProcessedCallback?()
             }
+            */
         }
     }
-    public var imageProcessedCallback: (() -> Void)?
+    //public var imageProcessedCallback: (() -> Void)?
     
     public init(image:CGImage, smoothlyScaleOutput:Bool = false, orientation:ImageOrientation = .portrait) {
         // TODO: Dispatch this whole thing asynchronously to move image loading off main thread

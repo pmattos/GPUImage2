@@ -94,6 +94,8 @@ public class Framebuffer {
     }
     
     deinit {
+        debugPrint("Running Framebuffer.deinit...")
+        
         if (!textureOverride) {
             var mutableTexture = texture
             glDeleteTextures(1, &mutableTexture)
