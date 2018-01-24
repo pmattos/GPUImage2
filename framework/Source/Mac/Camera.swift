@@ -3,6 +3,7 @@ import AVFoundation
 
 let initialBenchmarkFramesToIgnore = 5
 
+@objc(GPUCamera)
 public class Camera: NSObject, ImageSource, AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate {
     public var orientation:ImageOrientation
     public var runBenchmark:Bool = false
